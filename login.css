@@ -17,7 +17,7 @@ main .banner{
     align-items: center;
     gap: 20px;
     text-align: center;
-    margin-top: -70px;
+    /* margin-top: -70px; */
 }
 
 .banner{
@@ -97,6 +97,7 @@ form button[type="submit"] {
     background-color: #fff;
     color: #1C1C1E;
 }
+
 
 .or {
     position: relative;
