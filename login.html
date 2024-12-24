@@ -1,66 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login_style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'> 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
-
 <body>
-    <header>
-        <h1>Hi, welcome back!</h1>
-        <div class="image">
-            <img src="login.png" alt="">
+    <main>
+        <div class="banner">
+            
+            <div id="header">
+                <h1>Welcome back</h1>
+                <img src="login.png" alt="">
+            </div>
+            
+            
+            <form action="login.html">
+                <input type="email" name="email" placeholder="Your email" required>
+        
+                <input type="password" id="password" name="password" placeholder="Password" minlength="6" required>
+                
+                <i class="fas fa-eye" onclick="show()"></i> 
+                
+                <button type="submit">Sign in</button>
+        
+                <div class="or">or</div>
+                <button id="su" type="button" onclick="window.location.href='signup.html'">SIGN UP</button>
+                <div id="last">
+                    <p>
+                        You acknowledge that you read, and agree, to our <a href="https://en.wikipedia.org/wiki/Terms_of_service#:~:text=Terms%20of%20service%20(also%20known,to%20use%20the%20offered%20service.">Terms of Service</a> and our <a href="https://en.wikipedia.org/wiki/Privacy_policy#:~:text=A%20privacy%20policy%20is%20a,a%20customer%20or%20client's%20data.">Privacy Policy</a>.
+                    </p>
+                </div>
+                
+            </form>
+
+            <canvas id="dotsCanvas"></canvas>
         </div>
-    </header>
-    <form action="index.html">
-
-        <input 
-        type="email" 
-        name="email" 
-        placeholder="Your email"
-        required>
-
-        <div class="password-container">
-            <input 
-            id="password" 
-            type="password" 
-            name="password" 
-            placeholder="Password"
-            minlength="6"
-            required>
-            <span id="toggle-password" class="toggle-icon">👁️</span>
-        </div>
-
-        <a href="">Forgot password</a>
-
-        <button type="submit">Sign in</button>
-
-        <div class="or">or</div>
-        <button class="sso" type="button" onclick="window.location.href='signup.html'">Sign up for free</button>
-        <p>
-            You acknowledge that you read, and agree, to our <a href="https://termify.io/terms-of-service-generator?gad_source=1&gclid=CjwKCAiAjp-7BhBZEiwAmh9rBSKim_n_ABHRmq-wPurU8L0eK0e6hlolgCnmPQEQ5S5yA1kVdPg6qBoC180QAvD_BwE">Terms of Service</a> and our <a href="https://www.astartingpoint.com/static/privacy.html?gad_source=1&gclid=CjwKCAiAjp-7BhBZEiwAmh9rBY1rpKodNvkCELoSDb8fu5dpvYsy-CD4tfnyREJWuKFb-iURHKXKMhoCGhIQAvD_BwE">Privacy Policy</a>.
-        </p>
-    </form>
-
+    </main>    
+    <script src="app.js"></script>
     <script>
-        // Lấy các phần tử
-        const passwordInput = document.getElementById("password");
-        const togglePassword = document.getElementById("toggle-password");
-
-        // Thêm sự kiện click
-        togglePassword.addEventListener("click", function () {
-            // Kiểm tra loại input
-            const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-            passwordInput.setAttribute("type", type);
-
-            // Đổi biểu tượng
-            this.textContent = type === "password" ? "👁️" : "🙈";
-        });
+        function show() {
+        var password = document.getElementById("password");
+        if (password.type === "password") {
+            password.type = "text";
+        } else {
+            password.type = "password";
+        }
+    }
     </script>
 </body>
-
 </html>
