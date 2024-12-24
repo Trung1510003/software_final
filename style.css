@@ -40,10 +40,12 @@ canvas {
   font-weight:600;
   margin-right: 80px;
 }
-
+#header button:hover {
+  background-color: #fff;
+}
 #intro {
   position: relative;
-  top: 2000px;
+  top: 10px;
   /* left: 50px; */
   font-size: 51px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -54,7 +56,7 @@ canvas {
 
 #overview {
   position: relative;
-  top: 2500px;
+  top: 1100px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: #ffffff;
   -webkit-text-stroke: 2px black;
